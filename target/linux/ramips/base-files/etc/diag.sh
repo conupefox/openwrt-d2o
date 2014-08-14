@@ -191,6 +191,9 @@ get_status_led() {
 	ai-br100)
 		status_led="aigale:blue:wlan"
 		;;
+	wr-525w)
+                status_led="dualwan:blue:wlan"
+                ;;
 	y1 | \
 	y1s)
 		status_led="lenovo:blue:power"

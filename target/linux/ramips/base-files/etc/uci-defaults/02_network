@@ -133,7 +133,12 @@ ramips_setup_interfaces()
 		ucidef_add_switch_vlan "switch0" "1" "0 1 2 3 6t"
 		ucidef_add_switch_vlan "switch0" "2" "4 6t"
 		;;
-
+	wr-525w)
+                ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+                ucidef_add_switch "switch0" "1" "1"
+                ucidef_add_switch_vlan "switch0" "1" "0 1 2 3 6t"
+                ucidef_add_switch_vlan "switch0" "2" "4 6t"
+                ;;
 	ur-336un)
 		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
 		;;
@@ -151,8 +156,11 @@ ramips_setup_interfaces()
 	wl-351)
 		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
 		ucidef_add_switch "switch0" "1" "1"
-		ucidef_add_switch_vlan "switch0" "1" "0 1 2 3 5t"
-		ucidef_add_switch_vlan "switch0" "2" "4 5t"
+		ucidef_add_switch "switch1" "1" "1"
+		ucidef_add_switch_vlan "switch0" "1" "5t 6t"
+		ucidef_add_switch_vlan "switch0" "2" "5t 6t"
+		ucidef_add_switch_vlan "switch1" "1" "0 1 2 3 5t"
+                ucidef_add_switch_vlan "switch1" "2" "4 5t"
 		;;
 
 	rt-n56u)

@@ -319,6 +319,9 @@ ramips_board_detect() {
 	*"Aigale Ai-BR100")
 		name="ai-br100"
 		;;
+	*"DualWan WR-525W")
+                name="wr-525w"
+                ;;
 	*"Sercomm NA930")
 		name="na930"
 		;;

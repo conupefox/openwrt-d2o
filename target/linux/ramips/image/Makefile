@@ -725,6 +725,9 @@ Image/Build/Profile/NA930=$(call BuildFirmware/CustomFlash/$(1),$(1),na930,NA930
 Image/Build/Profile/MZK-750DHP=$(call BuildFirmware/Default8M/$(1),$(1),mzk-750dhp,MZK-750DHP)
 br100_mtd_size=8126464
 Image/Build/Profile/AIBR100=$(call BuildFirmware/CustomFlash/$(1),$(1),ai-br100,AIBR100,$(br100_mtd_size))
+wr525w_mtd_size=16384000
+#wr525w_mtd_size=8126464
+Image/Build/Profile/WR525W=$(call BuildFirmware/CustomFlash/$(1),$(1),wr-525w,WR525W,$(wr525w_mtd_size))
 Image/Build/Profile/Y1=$(call BuildFirmware/Default16M/$(1),$(1),Lenovo-y1,Y1)
 Image/Build/Profile/Y1S=$(call BuildFirmware/Default16M/$(1),$(1),Lenovo-y1s,Y1S)
 
@@ -742,6 +745,7 @@ define Image/Build/Profile/Default
 	$(call Image/Build/Profile/MZK-750DHP,$(1))
 	$(call Image/Build/Profile/NA930,$(1))
 	$(call Image/Build/Profile/AIBR100,$(1))
+        $(call Image/Build/Profile/WR525W,$(1))
 	$(call Image/Build/Profile/Y1,$(1))
 	$(call Image/Build/Profile/Y1S,$(1))
 endef

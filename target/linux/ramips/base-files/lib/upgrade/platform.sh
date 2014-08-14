@@ -95,6 +95,7 @@ platform_check_image() {
 	wr8305rt |\
 	wrtnode |\
 	ai-br100 |\
+	wr-525w |\
 	x5 |\
 	x8 |\
 	zbt-wa05 |\

@@ -165,6 +165,10 @@ case $board in
 		ucidef_set_led_netdev "wan" "wan" "aigale:blue:wan" "eth0.2"
 		set_wifi_led "aigale:blue:wlan"
 		;;
+	wr-525w)
+                ucidef_set_led_netdev "wan" "wan" "dualwan:blue:wan" "eth0.2"
+                set_wifi_led "dualwan:blue:wlan"
+                ;;
 	wcr-150gn)
 		set_usb_led "wcr150gn:amber:user"
 		;;
